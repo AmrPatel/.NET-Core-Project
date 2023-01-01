@@ -5,6 +5,7 @@ using System.Diagnostics;
 
 namespace BulkyBookWeb.Areas.Customer.Controllers
 {
+    [Area("Customer")]
     public class HomeController : Controller
     {
         //DI
