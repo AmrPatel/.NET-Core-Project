@@ -7,20 +7,20 @@ $(document).ready(function () {
 function loadDataTable() {
     dataTable = $('#tblData').dataTable({
         "ajax": {
-            "url": "/admin/product/getall"
+            "url": "/Admin/Company/GetAll"
         },
         "columns": [
-            { "data": "title", "with": "15%" },
-            { "data": "isbn", "with": "15%" },
-            { "data": "price", "with": "15%" },
-            { "data": "author", "with": "15%" },
-            { "data": "category.name", "with": "15%" },
+            { "data": "name", "with": "15%" },
+            { "data": "streetAddress", "with": "15%" },
+            { "data": "city", "with": "15%" },
+            { "data": "state", "with": "15%" },
+            { "data": "phoneNumber", "with": "15%" },
             {
                 "data": "id",
                 "render": function (data) {
                     return ` <div class="w-50 btn-group" role="group">
-                            <a href="/Admin/Product/Upsert?id=${data}" class="btn btn-primary mx-2"><i class="bi bi-pencil-square"></i>&nbsp; Edit</a>
-                            <a  OnClick=Delete('/Admin/Product/Delete/${data}') class="btn btn-danger mx-2"><i class="bi bi-trash3-fill"></i>&nbsp; Delete</a>
+                            <a href="/Admin/Company/Upsert?id=${data}" class="btn btn-primary mx-2"><i class="bi bi-pencil-square"></i>&nbsp; Edit</a>
+                            <a  OnClick=Delete('/Admin/Company/Delete/${data}') class="btn btn-danger mx-2"><i class="bi bi-trash3-fill"></i>&nbsp; Delete</a>
                         </div>`
                 },
                 "with": "15%"

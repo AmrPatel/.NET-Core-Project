@@ -3,37 +3,6 @@ using BulkyBook.Models;
 
 namespace BulkyBook.DataAccess.Repository
 {
-    //public class ProductRepository : Repository<Product>, IProductRepository
-    //{
-    //    private ApplicationDbContext _db;
-    //    public ProductRepository(ApplicationDbContext db) : base(db)
-    //    {
-    //        _db = db;
-    //    }
-
-    //    public void Update(Product obj)
-    //    {
-    //        var objFromDb = _db.Product.FirstOrDefault(x => x.Id == obj.Id);
-    //        if (objFromDb != null)
-    //        {
-    //            objFromDb.Title = objFromDb.Title;
-    //            objFromDb.Description = objFromDb.Description;
-    //            objFromDb.Author = objFromDb.Author;
-    //            objFromDb.CategoryId = objFromDb.CategoryId;
-    //            objFromDb.ISBN = objFromDb.ISBN;
-    //            objFromDb.Price = objFromDb.Price;
-    //            objFromDb.ListPrice = objFromDb.ListPrice;
-    //            objFromDb.Price100 = objFromDb.Price100;
-    //            objFromDb.Price50 = objFromDb.Price50;
-    //            objFromDb.CoverTypeId = objFromDb.CoverTypeId;
-    //            if(objFromDb.ImageUrl!= null)
-    //            {
-    //                objFromDb.ImageUrl = objFromDb.ImageUrl;
-    //            }
-    //        }
-    //    }
-    //}
-
     public class ProductRepository : Repository<Product>, IProductRepository
     {
         private ApplicationDbContext _db;
@@ -42,7 +11,6 @@ namespace BulkyBook.DataAccess.Repository
         {
             _db = db;
         }
-
 
         public void Update(Product obj)
         {
