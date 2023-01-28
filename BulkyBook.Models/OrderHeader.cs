@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,6 +25,7 @@ namespace BulkyBook.Models
         public string? OrderStatus { get; set; }
         public string? PaymentStatus { get; set; }
         public string? Carrier { get; set; }
+        public string? TrackingNumber { get; set; }
         public DateTime PaymentDate { get; set; }
         public DateTime PaymentDueDate { get; set; }
         public string? SessionId { get; set; }
