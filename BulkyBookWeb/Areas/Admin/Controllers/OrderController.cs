@@ -181,8 +181,8 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             _unitOfWork.Save();
             TempData["Success"] = "Order cancelled successfully.";
             return RedirectToAction("Details", "Order", new { orderId = OrderVM.OrderHeader.Id });
-
         }
+
         #region API Calls
         [HttpGet]
         public IActionResult GetAll(string status)
